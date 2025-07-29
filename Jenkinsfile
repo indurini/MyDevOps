@@ -13,14 +13,14 @@ pipeline {
         stage('Testing') {
             steps {
                 echo 'Deploying to TESTING environment...'
-                sh 'firebase deploy --project your-test-project-id --only hosting'
+                sh 'firebase deploy --project my-webapp-testing --only hosting'
             }
         }
 
         stage('Staging') {
             steps {
                 echo 'Deploying to STAGING environment...'
-                sh 'firebase deploy --project your-staging-project-id --only hosting'
+                sh 'firebase deploy --project my-webapp-staging --only hosting'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 input message: 'Deploy to PRODUCTION environment?'
                 echo 'Deploying to PRODUCTION...'
-                sh 'firebase deploy --project your-production-project-id --only hosting'
+                sh 'firebase deploy --project my-webapp-production --only hosting'
             }
         }
     }

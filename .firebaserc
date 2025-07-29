@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "my-webapp-testing",
+    "staging": "my-webapp-staging",
+    "production": "my-webapp-production"
+  }
+}
